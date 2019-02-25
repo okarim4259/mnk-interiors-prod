@@ -20,7 +20,7 @@ deploy:
   app: mnk-interiors-prod
   env: MnkInteriorsProd-env
   bucket_name: elasticbeanstalk-us-east-2-286545301062
-  bucket_path: nbt-dev-env
+  bucket_path: mnk-interiors-env
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
