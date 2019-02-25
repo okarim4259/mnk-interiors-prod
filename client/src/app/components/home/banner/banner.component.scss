@@ -1,0 +1,32 @@
+/* Required for full background image */
+
+html,
+body,
+header,
+.view {
+  min-height: 100vh !important;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+  }
+}
+
+h1 {
+  letter-spacing: 8px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+h5 {
+  letter-spacing: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hr-light {
+  border-top: 3px solid #fff;
+  width: 80px;
+}

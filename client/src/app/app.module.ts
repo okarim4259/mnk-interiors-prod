@@ -8,17 +8,18 @@ import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { AppRouterModule } from "./app-modules/app-router/app-router.module";
 import { BannerComponent } from "./components/home/banner/banner.component";
-import { MainHomeComponent } from "./components/home/main-home/main-home.component";
+
 import { FooterComponent } from "./components/footer/footer.component";
 import { ApiService } from "./services/data/api.service";
+import { HomeComponent } from "./components/home/home.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     BannerComponent,
-    MainHomeComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
