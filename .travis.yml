@@ -4,8 +4,8 @@ services:
 
 script:
   - docker build -t okarimdev/mnk-client ./client
-  - docker build -t nbtadmin/mnk-nginx ./nginx
-  - docker build -t nbtadmin/mnk-server ./server
+  - docker build -t okarimdev/mnk-nginx ./nginx
+  - docker build -t okarimdev/mnk-server ./server
 
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
