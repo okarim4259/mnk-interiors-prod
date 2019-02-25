@@ -1,0 +1,28 @@
+sudo: required
+services:
+  - docker
+
+script:
+  - docker build -t okarimdev/mnk-client ./client
+  - docker build -t nbtadmin/mnk-nginx ./nginx
+  - docker build -t nbtadmin/mnk-server ./server
+
+  # Log in to the docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Take those images and push them to docker hub
+  - docker push okarimdev/mnk-client
+  - docker push okarimdev/mnk-nginx
+  - docker push okarimdev/mnk-server
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: mnk-interiors-prod
+  env: MnkInteriorsProd-env
+  bucket_name: elasticbeanstalk-us-east-2-286545301062
+  bucket_path: nbt-dev-env
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
