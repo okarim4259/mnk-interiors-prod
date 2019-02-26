@@ -12,6 +12,8 @@ import { BannerComponent } from "./components/home/banner/banner.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { ApiService } from "./services/data/api.service";
 import { HomeComponent } from "./components/home/home.component";
+import { FeaturedProductsComponent } from "./components/home/featured-products/featured-products.component";
+import { FeaturedProductSingleComponent } from "./components/home/featured-products/featured-product-single/featured-product-single.component";
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { HomeComponent } from "./components/home/home.component";
     NavbarComponent,
     BannerComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    FeaturedProductsComponent,
+    FeaturedProductSingleComponent
   ],
   imports: [
     BrowserModule,
