@@ -14,6 +14,7 @@ import { FooterComponent } from "./components/footer/footer.component";
 import { ApiService } from "./services/data/api.service";
 import { HomeComponent } from "./components/home/home.component";
 import { BestSellersComponent } from "./components/home/best-sellers/best-sellers.component";
+import { FeaturedComponent } from './components/home/featured/featured.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BestSellersComponent } from "./components/home/best-sellers/best-seller
     BannerComponent,
     FooterComponent,
     HomeComponent,
-    BestSellersComponent
+    BestSellersComponent,
+    FeaturedComponent
   ],
   imports: [
     BrowserModule,

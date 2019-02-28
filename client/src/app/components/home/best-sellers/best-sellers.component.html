@@ -4,7 +4,6 @@
   <h1 class="text-center py-5">
     <strong>Our Bestsellers</strong>
   </h1>
-  <hr />
 
   <!--Section description-->
   <p class="grey-text pb-5 text-center">
@@ -13,10 +12,15 @@
     sunt in culpa qui officia deserunt mollit anim id est laborum.
   </p>
 
-  <!--Grid row-->
-  <div class="row text-center " *ngIf="show">
+  <!--Grid row  -->
+  <div class="row text-center">
     <!--Grid column-->
-    <div class="col-lg-4 col-md-12 mb-4 animated fadeInLeft">
+    <div
+      class="col-lg-4 col-md-12 mb-4"
+      inViewport
+      [inViewportOptions]="{ threshold: [0] }"
+      (inViewportAction)="onIntersection($event)"
+    >
       <!--Featured image-->
       <div
         class="view overlay zoom rounded z-depth-1 waves-light"
@@ -49,7 +53,12 @@
     <!--Grid column-->
 
     <!--Grid column-->
-    <div class="col-lg-4 col-md-6 mb-4 animated fadeIn">
+    <div
+      class="col-lg-4 col-md-6 mb-4"
+      inViewport
+      [inViewportOptions]="{ threshold: [0] }"
+      (inViewportAction)="onIntersection($event)"
+    >
       <!--Featured image-->
       <div
         class="view overlay zoom rounded z-depth-1  waves-light"
@@ -82,7 +91,12 @@
     <!--Grid column-->
 
     <!--Grid column-->
-    <div class="col-lg-4 col-md-6 mb-4 animated fadeInRight">
+    <div
+      class="col-lg-4 col-md-6 mb-4  "
+      inViewport
+      [inViewportOptions]="{ threshold: [0] }"
+      (inViewportAction)="onIntersection($event)"
+    >
       <!--Featured image-->
       <div
         class="view overlay zoom rounded z-depth-1  waves-light"
@@ -117,3 +131,4 @@
   <!--Grid row-->
 </section>
 <!--/Projects section v.1-->
+<hr />

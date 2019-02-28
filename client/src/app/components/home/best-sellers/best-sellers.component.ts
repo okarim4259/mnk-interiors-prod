@@ -10,17 +10,16 @@ export class BestSellersComponent implements OnInit {
 
   constructor(private renderer: Renderer2) {}
 
-  @HostListener("window:scroll", ["$event"])
-  public displaySection() {
-    setTimeout(() => {
-      this.show = true;
-    }, 40);
-  }
-
-  displayBestSellerFirst(event: any) {
-    if (event) {
-      this.show = true;
-    }
+  public onIntersection({
+    target,
+    visible
+  }: {
+    target: Element;
+    visible: boolean;
+  }): void {
+    this.renderer.addClass(target, visible ? "wow" : "");
+    this.renderer.addClass(target, visible ? "animated" : "animated");
+    this.renderer.addClass(target, visible ? "zoomIn" : "");
   }
 
   ngOnInit() {}
