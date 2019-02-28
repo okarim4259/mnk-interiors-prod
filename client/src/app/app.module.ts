@@ -3,6 +3,7 @@ import { NgModule } from "@angular/core";
 import { MDBBootstrapModule } from "angular-bootstrap-md";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HttpClientModule } from "@angular/common/http";
+import { InViewportModule } from "ng-in-viewport";
 
 import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
@@ -12,8 +13,7 @@ import { BannerComponent } from "./components/home/banner/banner.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { ApiService } from "./services/data/api.service";
 import { HomeComponent } from "./components/home/home.component";
-import { FeaturedProductsComponent } from "./components/home/featured-products/featured-products.component";
-import { FeaturedProductSingleComponent } from "./components/home/featured-products/featured-product-single/featured-product-single.component";
+import { BestSellersComponent } from "./components/home/best-sellers/best-sellers.component";
 
 @NgModule({
   declarations: [
@@ -22,14 +22,14 @@ import { FeaturedProductSingleComponent } from "./components/home/featured-produ
     BannerComponent,
     FooterComponent,
     HomeComponent,
-    FeaturedProductsComponent,
-    FeaturedProductSingleComponent
+    BestSellersComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     AppRouterModule,
+    InViewportModule,
     MDBBootstrapModule.forRoot()
   ],
   providers: [ApiService],
